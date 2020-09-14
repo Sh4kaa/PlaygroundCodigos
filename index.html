@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <script>
+        var sorteio;
+        var mega = new Array();
+        var i = 0;
+        while (i < 6) {
+            sorteio = Math.ceil(Math.random() * 60);
+            if (mega.indexOf(sorteio) < 0) {
+                mega.push(sorteio);
+                i++;
+            }
+        }
+
+        function odernarNumero(a, b) {
+            return a - b;
+        }
+        mega.sort(odernarNumero);
+        console.log(mega);
+    </script>
+</body>
+
+</html>
