@@ -6,22 +6,18 @@
 
 <body>
     <script>
-        var sorteio;
-        var mega = new Array();
-        var i = 0;
-        while (i < 6) {
-            sorteio = Math.ceil(Math.random() * 60);
-            if (mega.indexOf(sorteio) < 0) {
-                mega.push(sorteio);
-                i++;
-            }
-        }
+        var meses = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+        var dia = new Date();
+        var mes = new Date();
+        var ano = new Date();
+        console.log(dia.getDate() + ' de ' + meses[mes.getMonth()] + ' ' + ano.getFullYear());
 
-        function odernarNumero(a, b) {
-            return a - b;
-        }
-        mega.sort(odernarNumero);
-        console.log(mega);
+        var agora = new Date();
+        console.log(agora.getSeconds());
+
+
+        var horas = new Date();
+        console.log(horas.getHours() + ':' + horas.getMinutes() + ' ' + horas.getSeconds());
     </script>
 </body>
 
