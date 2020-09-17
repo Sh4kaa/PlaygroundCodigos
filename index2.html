@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Curso jQuery Fundamental</title>
+
+
+
+</head>
+
+<body>
+    <ul>
+
+    </ul>
+
+    <script>
+
+        var body = document.querySelector('body');
+        var ul = document.querySelector('ul');
+        var li;
+        var textoLi;
+
+        var botao = document.createElement('button');
+        var textoBotao = document.createTextNode('adicionar');
+        botao.appendChild(textoBotao);
+        body.appendChild(botao);
+        var input = document.createElement('input');
+        body.appendChild(input);
+
+
+        botao.onclick = function () {
+            var textoInput = input.value;
+            li = document.createElement('li');
+            textoLi = document.createTextNode(textoInput);
+            var licheio = li.appendChild(textoLi);
+            ul.appendChild(li);
+            body.appendChild(ul);
+            ul.style.listStyle = 'square';
+            input.value = '';
+        }
+        
+    </script>
+</body>
+
+</html>
